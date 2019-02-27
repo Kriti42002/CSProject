@@ -6,22 +6,73 @@
 struct books{
              int bookid;
              char bookname[100];
-             char authornme[100];
+             char authorname[100];
             }ob[10];
 void searchforbook()
 {
  char temp[100];
- 
+ cout<<"\nEnter book name:"
+ gets(temp);
+ for(int i=0; i<10; i++)
+ {
+  if(strcmp(ob[i].bookname, temp)==0)
+  {
+   cout<<"dadada";//or print function, still unsure.
+  }
+  else
+  { 
+   cout<<"Book not found.";
+   searchfor();
+  }
+ }
+}
+void searchforauthor()
+{
+ char temp[100]; int k=0;
+ cout<<"\nEnter author name:"
+ gets(temp);
+ for(int i=0; i<10; i++)
+ {
+  if(strcmp(ob[i].authorname, temp)==0)
+  {
+   cout<<"dadada";//or print function, still unsure.
+   k=1;
+  }
+ }
+ if(k=0)
+ {  
+  cout<<"Author not found.";
+  searchfor();
+ }
+}
+void searchbyid()
+{
+ int temp[100];
+ cout<<"\nEnter book code:"
+ cin>>temp;
+ for(int i=0; i<10; i++)
+ {
+  if(strcmp(ob[i].bookid, temp)==0)
+  {
+   cout<<"dadada";//or print function, still unsure.
+  }
+  else
+  { 
+   cout<<"Book not found.";
+   searchfor();
+  }
+ }
+}
 void searchfor()
 {
  int choice;
  nhike:
- cout<<"What do you wish to search by?";
- cout<<"[1] Search by Book Name";
- cout<<"[2] Search by Author Name";
- cout<<"[3] Search by Book Code";
- cout<<"[4] Exit to Main Menu";
- cout<<"Enter choice:";
+ cout<<"\nWhat do you wish to search by?";
+ cout<<"\n[1] Search by Book Name";
+ cout<<"\n[2] Search by Author Name";
+ cout<<"\n[3] Search by Book Code";
+ cout<<"\n[4] Exit to Main Menu";
+ cout<<"\nEnter choice:";
  cin>>choice;
  switch(choice):
  {
