@@ -1,0 +1,44 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdio.h>
+#include<ctype.h>
+#include<string.h>
+struct books{
+             int bookid;
+             char bookname[100];
+             char authornme[100];
+            }ob[10];
+void searchforbook()
+{
+ char temp[100];
+ 
+void searchfor()
+{
+ int choice;
+ nhike:
+ cout<<"What do you wish to search by?";
+ cout<<"[1] Search by Book Name";
+ cout<<"[2] Search by Author Name";
+ cout<<"[3] Search by Book Code";
+ cout<<"[4] Exit to Main Menu";
+ cout<<"Enter choice:";
+ cin>>choice;
+ switch(choice):
+ {
+  case(1):
+          searchforbook();
+          break;
+  case(2):
+          searchforauthor();
+          break;
+  case(3):
+          searchbyid();
+          break;
+  case(4):
+          main();
+          break;
+  default:
+          cout<<"Invalid option, try again?"
+          goto nhike;
+ }
+}
