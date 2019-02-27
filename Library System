@@ -8,6 +8,7 @@ struct books{
              char bookname[100];
              char authorname[100];
             }ob[10];
+
 void searchforbook()
 {
  char temp[100];
@@ -26,6 +27,7 @@ void searchforbook()
   }
  }
 }
+
 void searchforauthor()
 {
  char temp[100]; int k=0;
@@ -45,6 +47,7 @@ void searchforauthor()
   searchfor();
  }
 }
+
 void searchbyid()
 {
  int temp[100];
@@ -63,6 +66,7 @@ void searchbyid()
   }
  }
 }
+
 void searchfor()
 {
  int choice;
